@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let min = 0;
+        let max = 0;
+        let sum = 0;
+        let flag = false;
+
+        while (true) {
+            let numberStr = prompt("Enter 5 space-separated integers:", "1");
+            let numberArr = numberStr.split(' ').map(number => +number);
+            if (numberStr != null && numberArr.length === 5) {
+                miniMaxSum(numberArr);
+                break;
+            }
+        }
+
+        function miniMaxSum(numberArr) {
+            for (let i = 0; i < numberArr.length; i++) {
+                let currentNumber = numberArr[i];
+                sum = numberArr.reduce(function(initialValue, currentValue) {
+                    return (initialValue + currentValue);
+
+                }, 0) - currentNumber;
+                if (flag) {
+                    if (sum < min) {
+                        min = sum;
+                    }
+                    if (sum > max) {
+                        max = sum;
+                    }
+                } else {
+                    max = sum;
+                    min = sum;
+                    flag = true;
+                }
+
+            }
+            document.write(min + ' ' + max);
+        }
+    </script>
+</body>
+
+</html>
