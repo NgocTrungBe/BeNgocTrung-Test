@@ -21,7 +21,6 @@ function Joke() {
         setJoke(joke.joke_content);
         setJokeID(joke.id);
         setCount(count+1);
-          
       }
     }
 
