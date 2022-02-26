@@ -1,0 +1,137 @@
+.joke {
+    width: 100%;
+    height: 100%;
+    &__header {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__image {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__hero {
+        background: $primary-color;
+        text-align: center;
+        &__content {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include tablet {
+                height: 215px;
+            }
+            h2 {
+                margin-bottom: 5px;
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: 0.1rem;
+                color: #fff;
+                @include mobile {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    letter-spacing: 0;
+                }
+            }
+            p {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #fff;
+                @include mobile {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+    &__content {
+        padding-top: 50px;
+        padding-bottom: 60px;
+        @include tablet {
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
+        @include mobile {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &__text {
+            min-height: 100px;
+            @include tablet {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            @include mobile {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            p {
+                font-size: 1.6rem;
+                color: #333;
+                line-height: 25px;
+            }
+        }
+        &__button {
+            border-top: 1px solid #ececec;
+            padding-top: 50px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            @include mobile {
+                flex-direction: column;
+                padding-top: 30px;
+                margin-top: 30px;
+            }
+            .btn {
+                cursor: pointer;
+                min-width: 200px;
+                height: 48px;
+                margin-right: 20px;
+                color: #fff;
+                font-size: 1.6rem;
+                text-transform: capitalize;
+                transition: 0.2;
+                @include mobile {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                &--primary {
+                    background: $primary-color;
+                    &:hover {
+                        background: rgb(2, 160, 10);
+                    }
+                }
+                &--secondary {
+                    background: $secondary-color;
+                    &:hover {
+                        background: rgb(73, 73, 247);
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        margin-bottom: 10px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include mobile {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__content {
+            text-align: center;
+            p {
+                font-size: 1.5rem;
+                color: #535353;
+                line-height: 25px;
+                span {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
